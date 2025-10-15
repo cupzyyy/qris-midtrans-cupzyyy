@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QRIS Payment Gateway - Midtrans (Vercel)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>💳 Bayar dengan QRIS (Midtrans)</h1>
+    <p class="lead">Masukkan nominal, buat QR, lalu scan pakai aplikasi e-wallet.</p>
+
+    <input id="amount" type="number" placeholder="Masukkan nominal (Rp) — minimal 1.000" min="1000" />
+    <button id="createBtn">Buat QRIS</button>
+    <div class="note">Transaksi akan otomatis terkonfirmasi ketika Midtrans mengirim notifikasi.</div>
+
+    <div id="qrisArea" aria-live="polite"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

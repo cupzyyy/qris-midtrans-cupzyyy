@@ -1,0 +1,56 @@
+:root {
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --glass: rgba(255,255,255,0.12);
+  --text-soft: #e6e9ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+}
+.card {
+  width: 380px;
+  padding: 28px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(6,6,23,0.4);
+  text-align: center;
+}
+h1 { margin: 0 0 10px 0; font-size: 18px; }
+p.lead { margin: 0 0 18px 0; color: var(--text-soft); font-size: 13px; }
+input[type="number"] {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: white;
+  color: var(--accent);
+  transition: transform .12s ease, box-shadow .12s;
+}
+button:active { transform: translateY(1px); }
+.note { margin-top:12px; font-size:12px; color: #f3f4ffcc; }
+#qrisArea { margin-top:18px; color: var(--text-soft); }
+#qrisArea img { width: 230px; height: 230px; object-fit: cover; border-radius: 8px; margin-top: 8px; background: white; }
+.small { font-size:13px; color:#f8f9ffcc; }
+.status-pill { display:inline-block; padding:6px 10px; border-radius:999px; font-weight:600; margin-top:8px; font-size:13px; }
+.status-pending { background: rgba(255,255,255,0.12); color: #fff; }
+.status-paid { background: #06b6d4; color: #04202b; }
+.status-expired { background: #fb7185; color: #3b0210; }
